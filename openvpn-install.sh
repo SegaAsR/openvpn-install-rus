@@ -1,10 +1,8 @@
 #!/bin/bash
 # 
-# https://github.com/Nyr/openvpn-install
-# Copyright (c) 2013 Nyr. Released under the MIT License.
-#
+# Secure OpenVPN server installer for Debian, Ubuntu, CentOS
 # Перевод AspidovSS и дополнения
-# https://github.com/AspidovSS/openvpn-easyinstall-rus
+# https://github.com/AspidovSS/openvpn-install-rus
 # Copyright (c) 2019 AspidovSS. Released under the MIT License.
 
 
