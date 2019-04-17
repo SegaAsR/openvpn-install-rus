@@ -66,8 +66,8 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 		echo "   2) Удалить пользователя"
 		echo "   3) Удалить OpenVPN"
 		echo "   4) Выход"
-		echo "   5) Дополнительная информация"
-		read -p "Выберите опцию [1-4]: " option
+		echo "   5) Конфигурация ovpn"
+		read -p "Выберите опцию [1-5]: " option
 		case $option in
 			1) 
 			echo
@@ -167,11 +167,12 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 			;;
 			4) exit;;
 			5) 
-			echo "Конфигурация"
+			echo "Конфигурация ovpn"
 			echo "cipher AES-256-CBC"
 			echo "auth SHA512"
 			IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
-			echo -p "IP адресс: " -e -i $IP IP
+			echo -p "IP адресс сервера: " $IP 
+			echo -p "Протокол"$PROTOCOL
 			exit
 			;;
 		esac
