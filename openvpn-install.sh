@@ -71,7 +71,8 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 			1) 
 			echo
 			echo "Создание пользователя"
-			echo "Имя пользователя должно состоять из одного слова, без пробелов и специальных символов"
+			echo ""
+			echo "Имя пользователя должно состоять из одного слова, без пробелов и спец-символов"
 			read -p "Имя пользователя: " -e CLIENT
 			cd /etc/openvpn/easy-rsa/
 			EASYRSA_CERT_EXPIRE=3650 ./easyrsa build-client-full $CLIENT nopass
@@ -168,7 +169,7 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 	done
 else
 	clear
-	echo 'Добро пожаловать в мастер уставновки OpenVPN "road warrior" !'
+	echo 'Добро пожаловать в мастер уставновки OpenVPN !'
 	echo 
 	echo
 	# OpenVPN setup and first user creation
@@ -209,14 +210,14 @@ else
 	echo "   3) Google DNS | 8.8.8.8 / 8.8.4.4"
 	echo "   4) OpenDNS | 208.67.222.222 / 208.67.220.220"
 	echo "   5) Verisign | 64.6.64.6 / 64.6.65.6"
-	echo "   6) Yandex Basic Russia| 77.88.8.8 / 77.88.8.1"
-	echo "   7) AdGuard DNS Russia| 176.103.130.130 / 176.103.130.131"
+	echo "   6) Yandex Basic Russia | 77.88.8.8 / 77.88.8.1"
+	echo "   7) AdGuard DNS Russia | 176.103.130.130 / 176.103.130.131"
 	echo "   8) Quad9 | 9.9.9.9 / 149.112.112.112"
 	echo "   9) Quad9 Без цензуры | 9.9.9.10 / 149.112.112.10"
 	read -p "DNS [1-5]: " -e -i 1 DNS
 	echo
 	echo "Отлично! Осталось только создать пользователя."
-	echo "Имя пользователя должно состоять из одного слова, без пробелов и специальных символов"
+	echo "Имя пользователя должно состоять из одного слова, без пробелов и спец-символов"
 	read -p "Имя пользователя: " -e -i client CLIENT
 	echo
 	echo "Отлично, сейчас мы сконфигурируем OpenVPN сервер" 
