@@ -4,8 +4,6 @@
 # Перевод AspidovSS и дополнения
 # https://github.com/AspidovSS/openvpn-install-rus
 # Copyright (c) 2019 AspidovSS. Released under the MIT License.
-
-
 # Detect Debian users running the script with "sh" instead of bash
 if readlink /proc/$$/exe | grep -q "dash"; then
 	echo "Этот скрипт должен быть запущен из под bash"
